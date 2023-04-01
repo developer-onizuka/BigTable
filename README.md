@@ -7,12 +7,24 @@
 | Nodes | The nodes are organized in the form of a BigTable cluster that belongs to a specific BigTable instance | |
 | Tablets | As soon as BigTable identifies the data, each node directs its pointers to a certain set of tablets. These tablets are then stored over the Colossus. The rebalancing of tablets from one node to the other is seamless and fast. It is because the actual data is not at all copied. Instead, BigTable just updates its node pointers to respective tablets. | |
 
+<br>
 
 | | Fred | Gabriel | Hiroshi | Bob | Jakob |
 |:---|:---|:---|:---|:---|:---|
 | Jose | book-club | work | tennis | | |
 | Sofia | | | work | school | chess-club |
 
+
+| | Friend | Circle |
+|:---|:---|:---|
+| Jose#1| Fred | book-club |
+| Jose#2| Gabriel | work |
+| Jose#3| Hiroshi | tennis |
+| Sofia#1| Hiroshi | work |
+| Sofia#2| Bob | school |
+| Sofia#3| Jakob | chess-club |
+
+<br><br>
 
 ![cloumnQualifiers.png](https://github.com/developer-onizuka/BigTable/blob/main/columnQualifiers.png)
 
