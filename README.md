@@ -5,3 +5,5 @@ Requests : pass through the front-end server pool before they can reach the spec
 Nodes : The nodes are organized in the form of a BigTable cluster that belongs to a specific BigTable instance <br>
 
 ![cloumnQualifiers.png](https://github.com/developer-onizuka/BigTable/blob/main/columnQualifiers.png)
+
+![Bigtable-architecture.png](https://github.com/developer-onizuka/BigTable/blob/main/Bigtable-architecture.png)
