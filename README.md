@@ -19,6 +19,7 @@ Each column qualifier can be the name of a friend. Then the value for each colum
 | Jose | book-club | work | tennis | | |
 | Sofia | | | work | school | chess-club |
 
+Contrast this schema with a schema for the same data that doesn't use column qualifiers as data:<br>
 
 | | Friend | Circle |
 |:---|:---|:---|
