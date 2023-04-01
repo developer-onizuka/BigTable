@@ -9,6 +9,11 @@
 
 <br>
 
+# 2. Treat column qualifiers as data
+You can save space by naming the column with a value, if you store a column qualifier for every column.<br>
+As an example, consider a table that stores data about friendships, in which each row represents a person and all their friendships.<br>
+Each column qualifier can be the name of a friend. Then the value for each column in that row can be the social circle the friend is in. In this example, rows might look like this:<br>
+
 | | Fred | Gabriel | Hiroshi | Bob | Jakob |
 |:---|:---|:---|:---|:---|:---|
 | Jose | book-club | work | tennis | | |
