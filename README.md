@@ -18,6 +18,7 @@ Each column qualifier can be the name of a friend. Then the value for each colum
 |:---|:---|:---|:---|:---|:---|
 | Jose | book-club | work | tennis | | |
 | Sofia | | | work | school | chess-club |
+<br>
 
 Contrast this schema with a schema for the same data that doesn't use column qualifiers as data:<br>
 
@@ -29,6 +30,9 @@ Contrast this schema with a schema for the same data that doesn't use column qua
 | Sofia#1| Hiroshi | work |
 | Sofia#2| Bob | school |
 | Sofia#3| Jakob | chess-club |
+<br>
+
+If you're using column qualifiers to store data, give column qualifiers short but meaningful names. This approach lets you reduce the amount of data that is transferred for each request. 
 
 <br><br>
 
