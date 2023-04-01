@@ -40,8 +40,8 @@ Using the weather balloon data as an example, Every time a balloon sends its mea
 Each column in each row holds a measurement for each minute of the week. In this case, after three minutes, the first two columns in a row might look like this:<br>
 
 
-| Row | key |	pressure	| temp |
-|:---|:---|:---|:---|
+| Row key |	pressure	| temp |
+|:---|:---|:---|
 | asia-south2#3698#week1 |	94558 (t2021-03-05-1200)	| 9.5 (t2021-03-05-1200) |
 | ^ | 94122 (t2021-03-05-1201)	| 9.4 (t2021-03-05-1201) |
 | ^ | 95992 (t2021-03-05-1202)	| 9.2 (t2021-03-05-1202) |
