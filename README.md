@@ -10,7 +10,7 @@
 <br>
 
 # 1. Time buckets or Single-timestamp rows
-**Time buckets** : In a time bucket pattern, each row in your table represents a "bucket" of time, such as an hour, day, or month. A row key includes a non-timestamp identifier, such as week49, for the time period recorded in the row, along with other identifying data. <br>
+**Time buckets** : In a time bucket pattern, each row in your table represents a "bucket" of time, such as an hour, day, or month. A row key includes a non-timestamp identifier, such as week49, for the time period recorded in the row, along with other identifying data. <br><br>
 **Single-timestamp rows** : In this pattern, you create a row for each new event or measurement instead of adding cells to columns in existing rows. The row key suffix is the timestamp value. Tables that follow this pattern tend to be tall and narrow, and each column in a row contains only one cell. <br>
 
 | | Advantages | Disadvantages |
