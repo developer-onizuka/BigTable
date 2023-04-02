@@ -1,13 +1,4 @@
-# BigTable
-
-| | | |
-|:---|:---|:---|
-| Row key | The data within BigTable undergoes an assembling process with the use of a row key. The indexing of the map is then arranged as per the timestamps, row key, and column key. | |
-| Requests| Pass through the front-end server pool before they can reach the specific BigTable node | |
-| Nodes | The nodes are organized in the form of a BigTable cluster that belongs to a specific BigTable instance | |
-| Tablets | As soon as BigTable identifies the data, each node directs its pointers to a certain set of tablets. These tablets are then stored over the Colossus. The rebalancing of tablets from one node to the other is seamless and fast. It is because the actual data is not at all copied. Instead, BigTable just updates its node pointers to respective tablets. | |
-
-<br>
+# BigTable Schema Design
 
 # 1. Time buckets or Single-timestamp rows
 **Time buckets** : In a time bucket pattern, each row in your table represents a "bucket" of time, such as an hour, day, or month. **A row key includes a non-timestamp identifier, such as week49**, for the time period recorded in the row, along with other identifying data. Data adding for the direction of Column or Cell.<br><br>
@@ -57,6 +48,16 @@ Each column in each row holds a measurement for each minute of the week. In this
 | ^ | 95992 (t2021-03-05-1202)	| 9.2 (t2021-03-05-1202) |
 
 <br><br>
+
+
+| | | |
+|:---|:---|:---|
+| Row key | The data within BigTable undergoes an assembling process with the use of a row key. The indexing of the map is then arranged as per the timestamps, row key, and column key. | |
+| Requests| Pass through the front-end server pool before they can reach the specific BigTable node | |
+| Nodes | The nodes are organized in the form of a BigTable cluster that belongs to a specific BigTable instance | |
+| Tablets | As soon as BigTable identifies the data, each node directs its pointers to a certain set of tablets. These tablets are then stored over the Colossus. The rebalancing of tablets from one node to the other is seamless and fast. It is because the actual data is not at all copied. Instead, BigTable just updates its node pointers to respective tablets. | |
+
+<br>
 
 ![cloumnQualifiers.png](https://github.com/developer-onizuka/BigTable/blob/main/columnQualifiers.png)
 
