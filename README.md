@@ -9,6 +9,15 @@
 
 <br>
 
+# 1. Time buckets or Single-timestamp rows
+**Time buckets** : In a time bucket pattern, each row in your table represents a "bucket" of time, such as an hour, day, or month. A row key includes a non-timestamp identifier, such as week49, for the time period recorded in the row, along with other identifying data. <br>
+**Single-timestamp rows** : In this pattern, you create a row for each new event or measurement instead of adding cells to columns in existing rows. The row key suffix is the timestamp value. Tables that follow this pattern tend to be tall and narrow, and each column in a row contains only one cell. <br>
+
+| | Advantages | Disadvantages |
+|:---|:---|:---|
+| Time buckets | - You'll see better performance. For example, if you store 100 measurements, Bigtable writes and reads those measurements faster if they are in one row than if they are in 100 rows. <br> - Data stored in this way is compressed more efficiently than data in tall, narrow tables. <br>| Time-bucket schema design patterns are more complicated than single-timestamp patterns and can take more time and effort to develop. |
+| Single-timestamp rows | | |
+
 # 2. Adding new columns for new events
 Treat column qualifiers as data, so that you can save space by naming the column with a value.<br>
 As an example, consider a table that stores data about friendships, in which each row represents a person and all their friendships.<br>
