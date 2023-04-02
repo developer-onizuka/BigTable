@@ -1,11 +1,11 @@
 # BigTable Schema Design
 
--Rows are time buckets
-> New columns for new events
+**- Rows are time buckets**<br>
+> New columns for new events <br>
 > New cells for new events
 
-- Rows represent single timestamps
-> Serialized column data
+**- Rows represent single timestamps**
+> Serialized column data <br>
 > Unserialized column data
 
 # 1. Time buckets or Single-timestamp rows
