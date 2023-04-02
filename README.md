@@ -18,7 +18,8 @@
 | Time buckets | - You'll see better performance. For example, if you store 100 measurements, Bigtable writes and reads those measurements faster if they are in one row than if they are in 100 rows. <br> - Data stored in this way is compressed more efficiently than data in tall, narrow tables. <br>| Time-bucket schema design patterns are more complicated than single-timestamp patterns and can take more time and effort to develop. |
 | Single-timestamp rows | | |
 
-# 2. Adding new columns for new events
+# 2. Time buckets
+# 2-1. Adding new columns for new events
 Treat column qualifiers as data, so that you can save space by naming the column with a value.<br>
 As an example, consider a table that stores data about friendships, in which each row represents a person and all their friendships.<br>
 Each column qualifier can be the name of a friend. Then the value for each column in that row can be the social circle the friend is in. In this example, rows might look like this:<br>
@@ -43,7 +44,7 @@ Contrast this schema with a schema for the same data that doesn't use column qua
 
 If you're using column qualifiers to store data, give column qualifiers short but meaningful names. This approach lets you reduce the amount of data that is transferred for each request. 
 
-# 3. Adding new cells for new events
+# 2-2. Adding new cells for new events
 This pattern lets you take advantage of Bigtable's ability to let you store multiple timestamped cells in a given row and column.<br>
 Using the weather balloon data as an example, Every time a balloon sends its measurements, the application writes new values to the row that holds the current week's data for the balloon, writing additional timestamped cells to each column.<br>
 Each column in each row holds a measurement for each minute of the week. In this case, after three minutes, the first two columns in a row might look like this:<br>
