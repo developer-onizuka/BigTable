@@ -7,7 +7,7 @@
 | | Advantages | Disadvantages |
 |:---|:---|:---|
 | Time buckets | - You'll see better performance. For example, if you store 100 measurements, Bigtable writes and reads those measurements faster if they are in one row than if they are in 100 rows. <br> - Data stored in this way is compressed more efficiently than data in tall, narrow tables. <br>| Time-bucket schema design patterns are more complicated than single-timestamp patterns and can take more time and effort to develop. |
-| Single-timestamp rows | | |
+| Single-timestamp rows (Single-timestamp unserialized) | - It is generally easier to implement than a time-bucket pattern. <br> - You might spend less time refining your schema before using it. | - Bigtable is less performant with this pattern. <br>- Data stored this way is not as efficiently compressed as data in wider columns. <br> - Even when the timestamp is at the end of the row key, this pattern can result in hotspots. <br>|
 
 # 2. Time buckets
 # 2-1. Adding new columns for new events
