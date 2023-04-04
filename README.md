@@ -29,7 +29,7 @@ Each column qualifier can be the name of a friend. Then the value for each colum
 | Sofia | | | work | school | chess-club |
 <br>
 
-|:---|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|
 | Jose | Fred:book-club | Gabriel:work | Hiroshi:tennis |
 | Sofia | Hiroshi:work | Bob:school | Jakob:chess-club |
 
