@@ -29,6 +29,7 @@ Each column qualifier can be the name of a friend. Then the value for each colum
 | Sofia | | | work | school | chess-club |
 <br>
 But actually Bigtable stores the column name along with the value as followings:
+
 | | | | |
 |:---|:---|:---|:---|
 | Jose | Fred:book-club | Gabriel:work | Hiroshi:tennis |
