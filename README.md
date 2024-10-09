@@ -1,5 +1,7 @@
 # BigTable Schema Design
 
+BigTableは、Googleが提供するフルマネージドのNoSQLデータベースサービスで、特に大規模なデータセットの高速処理に適しています。このリポジトリはBigTableの機能について掘り下げるものです。なお、BigTableは、大量のデータを高速に書き込み、読み取る必要があるアプリケーションに適しています。その性能と拡張性により、IoT、金融テクノロジー、広告技術など、大量のデータを扱う分野で広く利用されるものです。
+
 **- Rows are time buckets**<br>
 > New columns for new events <br>
 > New cells for new events
